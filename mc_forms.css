@@ -12,3 +12,80 @@
    Filename: mc_forms.css
 
 */
+
+/* This element selector of legend is used to affect the look of each section title 
+such as Customer Information, Computer Specifications, etc. */
+legend {
+   background-color: rgb(6, 38, 180);
+   color: yellow;
+   font-size: 1.25em;
+   border-radius: 10px;
+   margin-bottom: 10px;
+   padding: 8px;
+   width: 70%;
+}
+
+/* The fieldset input element selector here is used to make some space between all 
+of the inputs on the web page that are in the first section. */
+fieldset input {
+   display: block;
+   margin-bottom: 30px;
+}
+
+/* The following inputs and button element selectors are used to affect the buttons at 
+the bottom of the web page to clear all of the information filled out , submit your 
+form, and contact the company. */
+input#submit {
+      font-size: 1.5em;
+      background-color: rgb(6, 38, 180);
+      color: yellow;
+      margin-left: 300px;
+}
+
+input#cancel {
+      font-size: 1.5em;
+      background-color: rgb(6, 38, 180);
+      color: yellow;
+      margin-left: 550px;
+}
+
+button {
+      font-size: 1.5em;
+      background-color: rgb(6, 38, 180);
+      color: yellow;
+      display: block;
+      margin-left: 590px;
+      margin-bottom: 20px;
+}
+
+/* The select element is styled to have each different select elemnt on a different line by using
+display block and margining the bottom of each selection list.  */
+select {
+   display: block;
+   margin-bottom: 30px;
+}
+
+/* The following fieldset is designed to be centered right in the middle of the body element and it has 
+a rounded border to it by using a style of border-radius. */
+fieldset {
+   width: 70%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 50px;
+   border-radius: 15px;
+}
+
+/* The following fieldset with the inputs inside of them that don't contain a type of radio have the following styles */
+fieldset input:not([type='radio']):focus {
+   background: rgb(241, 241, 241);
+}
+
+/* The two following fieldsets with inouts inside of them are determined to be either valid or invalid by displaying 
+either a red X or a checkmark in the space that is needed to be filled in correctly. */
+fieldset input:not([type='radio']):focus:valid {
+   background: rgb(215, 255, 215) url(mc_go.png) right/contain no-repeat;
+}
+
+fieldset input:not([type='radio']):focus:invalid {
+   background: rgb(255, 215, 215) url(mc_stop.png) right/contain no-repeat;
+}

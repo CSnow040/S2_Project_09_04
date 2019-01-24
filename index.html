@@ -26,36 +26,82 @@
 
 <body>
 
-    <header>
-
-    </header>
-
     <img src="mc_logo.png" alt="">
 
+    <!-- This is the majority of the page content which is a series of fieldsets in a form 
+        the are filled out by the user/consumer of the product at hand. -->
     <form name="cForm" action=" http://www.mill_computers.com/orders/process.cgi" method="POST">
+        <!-- The following fieldset holds multiple labels that correspond to an input with specific id's, types, and requirements
+             for all of them. This means that each label will take place on the website alongside an input box for the user to fill
+              out and if not filled out correctly it will not allow them to submit the form. -->
         <fieldset>
+            <legend>Customer Information</legend>
             <label for="fName">First Name</label>
-            <input id="fName" type="text">
+            <input id="fName" type="text" required>
 
             <label for="lName">Last Name</label>
-            <input id="lName" type="text">
+            <input id="lName" type="text" required>
 
             <label for="street">Steet</label>
-            <input id="street" type="text">
+            <input id="street" type="text" required>
 
             <label for="city">City</label>
-            <input id="city" type="text">
+            <input id="city" type="text" required>
 
             <label for="state">State</label>
-            <input id="state" type="text">
+            <input id="state" type="text" required>
 
             <label for="zip">Postal Code</label>
-            <input id="zip" type="text">
+            <input id="zip" type="text" placeholder="nnnnn-(nnnn)" pattern="(\d{5}([\-]\d{4})?)" required>
 
             <label for="phone">Phone Number</label>
-            <input id="phone" type="text">
+            <input id="phone" type="tel" placeholder="(nnn)-nnn-nnnn" patern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required>
         </fieldset>
+
+        <!-- This fieldset holds the computer specs options that the user will select before submitting their form to the
+             company which involves a multitude of selction lists all with multiple differnt choices for each section. -->
+        <fieldset>
+            <legend>Computer Specifications</legend>
+            <label>Processor Speed</label>
+            <select name="pSpeed">
+                <option value="3.2GHz">3.2 GHz</option>
+                <option value="4.0GHz">4.0 GHz</option>
+                <option value="5.2GHz">5.2 GHz</option>
+            </select>
+
+            <label>Memory</label>
+            <select name="mem">
+                <option value="1GB">1 GB</option>
+                <option value="1GB">2 GB</option>
+                <option value="1GB">4 GB</option>
+                <option value="1GB">8 GB</option>
+            </select>
+
+            <label>Monitor Size</label>
+            <select name="monitor">
+                <option value="15">15"</option>
+                <option value="17">17"</option>
+                <option value="19">19"</option>
+                <option value="21">21"</option>
+            </select>
+
+            <label>Hard Drive</label>
+            <select name="hd">
+                <option value="240GB">240 GB</option>
+                <option value="500GB">500 GB</option>
+                <option value=750GB"">750 GB</option>
+                <option value="1TB">1 TB</option>
+            </select>
+        </fieldset>
+
+        <!-- Both of these inputs as well as the button element are used to give the user a type of cleasring
+             mechanism, submit button, and a contact button to contact the company or seller. -->
+        <input id="submit" type="submit" name="Send Order">
+        <input id="cancel" type="reset" name="Cancel Order">
+        <button type="">Contact Me</button>
     </form>
+
+    <footer>All Rights Reserved 2019.</footer>
 
 </body>
 

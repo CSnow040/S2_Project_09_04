@@ -12,3 +12,30 @@
    Filename: mc_styles.css
 
 */
+
+/* Structural Styles */
+
+html {
+   background: url(background.jpg);
+}
+
+/* The following body element selector is used to center the page suing margins 
+and giving the background a basic white color to keep the html background image 
+from protruding. */
+
+body {
+   width: 70%;
+   margin-left: auto;
+   margin-right: auto;
+   background-color: white;
+}
+
+/* This is just a basic footer for the web page to read it as an ending point 
+on the website itself */
+
+footer {
+   background-color: rgb(121, 121, 121);
+   color: white;
+   text-align: center;
+   font-size: 1em;
+}
